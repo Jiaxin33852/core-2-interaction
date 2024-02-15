@@ -1,0 +1,129 @@
+/* Resetting base styles for consistency */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #4B0082; /* Using a shade of purple for text for better readability */
+}
+
+/* Header styles */
+.Header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.Header-title h1 {
+    margin: 0;
+    font-size: 2em; /* Increased font size for emphasis */
+}
+
+/* Navigation styles */
+.Nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.Nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.Nav-item {
+    margin: 0 15px; /* Increased spacing between nav items */
+}
+
+.Nav-link {
+    text-decoration: none;
+    color: #fff;
+    background-color: #4B0082; /* Changed to purple to match the theme */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.Nav-link:hover, .Nav-link:focus {
+    background-color: #6930c3; /* Darker purple for hover/focus */
+}
+
+/* Main content and footer styles */
+.Page {
+    margin: 20px;
+}
+
+.Page-header h1 {
+    color: #4B0082; /* Keeping the header consistent with the purple theme */
+}
+
+.Fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.Fieldset-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.PostList-item {
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.PostList-link {
+    color: #007bff; /* Adding a bit of color contrast */
+    text-decoration: none;
+}
+
+.Footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.StudentNav a {
+    margin: 0 5px;
+}
+
+/* Enhancing the toggle and select field styles */
+.Fieldset-group {
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Nav-item {
+        margin: 5px 0; /* Adjust for vertical layout on smaller screens */
+    }
+}
+
+.Page {
+    margin: 20px;
+    padding-bottom: 60px; /* Adjust based on the footer's height */
+}
+
