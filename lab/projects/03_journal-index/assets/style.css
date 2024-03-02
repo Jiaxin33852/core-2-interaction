@@ -1,0 +1,47 @@
+/* style for main content */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #050505;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* image style */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+/* image caption style */
+figcaption {
+    background: #e7e7e7;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Date style */
+p {
+    background: #ddd;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block; 
+    margin-top: 10px; 
+}
+
+/* Title Style */
+title {
+    color: #333;
+}
