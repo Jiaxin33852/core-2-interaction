@@ -1,0 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1a2a6c;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 30px; /* 减少顶部间距 */
+}
+
+header h1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: #FFBA53;
+    font-weight: 400;
+}
+
+.page-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative; /* 确保可以通过top调整位置 */
+    top: 5%; /* 向上调整内容位置 */
+}
+
+.titles {
+    display: flex;
+    flex-direction: row; /* 副标题移到主标题左侧 */
+    align-items: center;
+    margin-right: 20px;
+}
+
+.title, .subtitle {
+    line-height: 1; /* 紧凑的垂直间距 */
+    margin: 10px;
+    font-weight: 300;
+}
+
+.title {
+    font-size: 64px;
+}
+
+.subtitle {
+    font-size: 32px;
+    order: -1; /* 副标题在前 */
+    margin-top: 500px;
+    color: #9c9c9c;
+}
+
+.main-text {
+    width: 60%;
+    margin-top: -10%;
+}
+
+.main-text p {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 64px;
+    cursor: pointer;
+    position: absolute;
+    top: 80%;
+    text-decoration: none;
+}
+
+.arrow.left {
+    left: 10%;
+}
+
+.arrow.right {
+    right: 10%;
+}
+
+.arrow:hover {
+    color: #aaa;
+}
+
+.highlight {
+    color: #FFBA53; /* 设置字体颜色 */
+    text-decoration: none; /* 移除下划线 */
+}
+
+.highlight:hover {
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+}
+
