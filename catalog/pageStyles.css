@@ -12,7 +12,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    padding-top: 30px; /* 减少顶部间距 */
+    padding-top: 30px; 
 }
 
 header h1 {
@@ -29,21 +29,23 @@ header h1 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    position: relative; /* 确保可以通过top调整位置 */
-    top: 5%; /* 向上调整内容位置 */
+    position: relative; /* make sure you can use top to adjust position */
+    top: 0%; 
 }
 
 .titles {
     display: flex;
-    flex-direction: row; /* 副标题移到主标题左侧 */
+    flex-direction: row; /* subtitle on the left */
     align-items: center;
     margin-right: 20px;
+    justify-content: center;
 }
 
 .title, .subtitle {
-    line-height: 1; /* 紧凑的垂直间距 */
+    line-height: 1; 
     margin: 10px;
     font-weight: 300;
+    text-align: center;
 }
 
 .title {
@@ -52,7 +54,7 @@ header h1 {
 
 .subtitle {
     font-size: 32px;
-    order: -1; /* 副标题在前 */
+    order: -1; /* subtitle on the left */
     margin-top: 500px;
     color: #9c9c9c;
 }
@@ -92,11 +94,11 @@ header h1 {
 }
 
 .highlight {
-    color: #FFBA53; /* 设置字体颜色 */
-    text-decoration: none; /* 移除下划线 */
+    color: #FFBA53; 
+    text-decoration: none; /* no underline */
 }
 
 .highlight:hover {
-    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+    text-decoration: underline; /* underline when hover */
 }
 
