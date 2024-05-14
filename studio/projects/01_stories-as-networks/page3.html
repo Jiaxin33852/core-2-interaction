@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In Praise of Shadows</title>
+    <link rel="stylesheet" href="./index.min.css" />
+    <style>
+      body {
+        background-color: #000;
+        overflow-x: hidden;
+      }
+
+      body * {
+        z-index: 20;
+        color: #000;
+      }
+
+      #light {
+        top: 100px;
+        width: 800px;
+        height: 1000px;
+        position: absolute;
+        left: 22%;
+        margin-top: -270px;
+        transform: rotate(-58deg);
+      }
+
+      #light .line {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* background-color: #fff; */
+        clip-path: polygon(
+          calc(50% - 80px) 0,
+          calc(50% + 78px) 0,
+          100% 100%,
+          0 100%
+        );
+        background-image: linear-gradient(to bottom, #fff 0%, transparent 100%);
+        opacity: 0;
+        z-index: 0;
+        animation: 2s linear 1s 1 introAnimationLights forwards;
+      }
+
+      #light .shape {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        width: 180px; /* 直径 */
+        height: 90px; /* 直径的一半 */
+        /* background: #2f8381; */
+        background-image: linear-gradient(to left, #2f8381 0%, #0efffb 100%);
+        border-radius: 100px 100px 0 0;
+        transform: translateX(-50%);
+        z-index: 10;
+      }
+      .shape-off {
+        height: 150px;
+        width: 10px;
+
+        position: absolute;
+        top: -150px;
+        left: 50%;
+        background-image: linear-gradient(to top, #2f8381 0%, #0efffb 100%);
+        transform: translateX(-50%);
+        z-index: 0;
+      }
+      .shape1 {
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        background-image: linear-gradient(to top, #2f8381 0%, #0efffb 100%);
+        transform: translateX(-50%);
+        z-index: 10;
+      }
+      .high {
+        position: absolute;
+        left: 20%;
+        top: 20%;
+        width: 10px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        transform: rotate(45deg);
+        opacity: 0.5;
+        /* background-image: linear-gradient(to bottom, #fff 0%, transparent 100%); */
+      }
+      li a:hover {
+        color: blue;
+      }
+      .text-container {
+        position: relative;
+        width: 650px;
+        margin: 150px 25%;
+        animation: marquee 20s linear infinite 2s;
+      }
+      p {
+        position: relative;
+        text-align: justify;
+        font-size: 28px;
+      }
+      .bottom-links .chapter-select li {
+        list-style: none;
+        font-size: 28px;
+        height: 40px;
+        line-height: 40px;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="light">
+      <div class="shape1"></div>
+      <div class="shape-off"></div>
+      <div class="shape"><div class="high"></div></div>
+      <div class="line"></div>
+    </div>
+    <div class="links">
+      <a href="./page2.html" class="sign">PREV</a>
+      <a href="./index.html" class="sign">HOME</a>
+    </div>
+    <div class="marquee text-container" id="text">
+      <div class="marquee-content">
+        <h1>The Philosophy of Shadows</h1>
+        <p>
+          And so it has come to be that the beauty of a Japanese room depends on
+          a variation of shadows, heavy shadows against light shadows-it has
+          nothing else. Westerners are amazed at the simplicity of Japanese
+          rooms, perceiving in them no more than ashen walls bereft of ornament.
+        </p>
+        <p>
+          Their reaction is understandable, but it betrays a failure to
+          comprehend the mystery of shadows.
+        </p>
+        <p>
+          Out beyond the sitting room, which the rays of the sun can at best but
+          barely reach, we extend the eaves or build on a veranda, putting the
+          sunlight at still greater a remove.
+        </p>
+        <p>
+          The light from the garden steals in but dimly through paper-paneled
+          doors, and it is precisely this indirect light that makes for us the
+          charm of a room. We do our walls in neutral colors so that the sad,
+          fragile, dying rays can sink into absolute repose. The storehouse,
+          kitchen, hallways, and such may have a glossy finish, but the walls of
+          the sitting room will almost always be of day textured with fine sand.
+        </p>
+        <p>
+          A luster here would destroy the soft fragile beauty of the feeble
+          light. We delight in the mere sight of the delicate glow of fading
+          rays clinging to the surface of a dusky wall, there to live out what
+          little life remains to them. We never tire of the sight, for to us
+          this pale glow and these dim shadows far surpass any ornament.
+        </p>
+        <p>
+          And so, as we must if we are not to disturb the glow, we finish the
+          walls with sand in a single neutral color. The hue may differ from
+          room to room, but the degree of difference will be ever so slight; not
+          so much a difference in color as in shade, a difference that will seem
+          to exist only in the mood of the viewer. And from these delicate
+          differences in the hue of the walls, the shadows in each room take on
+          a tinge peculiarly their own.
+        </p>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script></script>
+  </body>
+</html>

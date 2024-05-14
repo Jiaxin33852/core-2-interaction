@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.min.css" />
+    <title>The Contrast of Light and Shadow</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100svh;
+        background-color: rgb(2, 8, 22);
+        color: rgb(209, 209, 209);
+        display: grid;
+        place-content: center;
+        font-size: 1rem;
+        font-family: system-ui, sans-serif;
+      }
+      h1 {
+        font-size: 1rem;
+        font-weight: 100;
+      }
+      .hashtag {
+        font-size: 0.8rem;
+        text-align: right;
+        font-weight: 100;
+      }
+      .filtered {
+        margin-block: 0.5rem;
+        width: 100%;
+        max-width: 1000px;
+        font-size: 2rem;
+        line-height: 1.4;
+        font-weight: 300;
+        border: 1px solid #ffffff30;
+        padding: 2rem;
+        cursor: grab;
+      }
+      .filtered span {
+        filter: blur(7px);
+        transition: 300ms ease-in-out;
+      }
+      .filtered span:hover {
+        filter: blur(0);
+      }
+      .filtered span:has(+ span:hover),
+      .filtered span:hover + span {
+        filter: blur(2px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Contrast of Light and Shadow</h1>
+    <div id="filtered" class="filtered">
+      In making for ourselves a place to live, we first spread a parasol to
+      throw a shadow on the earth, and in the pale light of the shadow we put
+      together a house. There are of course roofs on Western houses too, but
+      they are less to keep off the sun than to keep off the wind and the dew;
+      even from without it is apparent that they are built to create as few
+      shadows as possible and to expose the interior to as much light as
+      possible. If the roof of a Japanese house is a parasol, the roof of a
+      Western house is no more than a cap, with as small a visor as possible so
+      as to allow the sunlight to penetrate directly beneath the eaves. There
+      are no doubt all sorts of reasons-climate, building materials-for the deep
+      Japanese eaves. The fact that we did not use glass, concrete, and bricks,
+      for instance, made a low roof necessary to keep off the driving wind and
+      rain. A light room would no doubt have been more convenient for us, too,
+      than a dark room. The quality that we call beauty, however, must always
+      grow from the realities of life, and our ancestors, forced to live in dark
+      rooms, presently came to discover beauty in shadows, ultimately to guide
+      shadows towards beauty's ends.
+    </div>
+
+    <div class="links">
+      <a href="./page1.html" class="sign">PREV</a>
+      <a href="./page3.html" class="sign">NEXT</a>
+    </div>
+    <script>
+      // warp each word in a span (this could also be done direcctly in the HTML without the need for JS)
+      const container = document.getElementById("filtered")
+      const text = container.innerHTML
+      const lines = text.split("<br>")
+      const html = lines
+        .map(function (line) {
+          const words = line.trim().split(/\s+/)
+          const lineHtml = words
+            .map(function (word) {
+              return `<span>${word}</span>`
+            })
+            .join(" ")
+          return `${lineHtml}<br>`
+        })
+        .join("")
+      container.innerHTML = html
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In Praise of Shadows</title>
+    <style>
+      body {
+        background-color: #000;
+        overflow-x: hidden;
+      }
+
+      body * {
+        z-index: 20;
+        color: #000;
+      }
+
+      #light {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-color: #fff;
+        z-index: 10;
+        -webkit-box-shadow: inset 0px 0px 150px 166px rgba(0, 0, 0, 1);
+        -moz-box-shadow: inset 0px 0px 150px 166px rgba(0, 0, 0, 1);
+        box-shadow: inset 0px 0px 150px 166px rgba(0, 0, 0, 1);
+      }
+
+      li a:hover {
+        color: blue;
+      }
+      .text-container {
+        position: relative;
+        width: 80%;
+        margin: 0px auto;
+      }
+      p {
+        position: relative;
+        text-align: justify;
+        font-size: 28px;
+      }
+      .bottom-links .chapter-select li {
+        list-style: none;
+        font-size: 28px;
+        height: 40px;
+        line-height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="light"></div>
+    <div class="text-container">
+      <h1>In Praise of Shadows</h1>
+      <p>
+        I possess no specialized knowledge of architecture, but I understand
+        that in the Gothic cathedral of the West, the roof is thrust up and up
+        so as to place its pinnacle as high in the heavens as possible-and that
+        herein is thought to lie its special beauty.
+      </p>
+      <p>
+        In the temples of Japan, on the other hand, a roof of heavy tiles is
+        first laid out, and in the deep, spacious shadows created by the eaves
+        the rest of the structure is built.
+      </p>
+      <p>
+        Nor is this true only of temples; in the palaces of the nobility and the
+        houses of the common people, what first strikes the eye is the massive
+        roof of tile or thatch and the heavy darkness that hangs beneath the
+        eaves.
+      </p>
+      <p>
+        Even at midday cavernous darkness spreads over all beneath the roof's
+        edge, making entryway, doors, walls, and pillars all but invisible. The
+        grand temples of Kyoto-Chion'in, Honganji-and the farmhouses of the
+        remote countryside are alike in this respect: like most buildings of the
+        past their roofs give the impression of possessing far greater weight,
+        height, and surface than all that stands beneath the eaves.
+      </p>
+      <div class="bottom-links">
+        <ul class="chapter-select">
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./page2.html">NEXT</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(document).mousemove(function (event) {
+          $("#light").css({ top: event.pageY - 250, left: event.pageX - 250 })
+        })
+      })
+    </script>
+  </body>
+</html>
